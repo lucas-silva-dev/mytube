@@ -1,0 +1,20 @@
+.wrapper {
+  width: 100%;
+
+  input  {
+    width: 100%;
+    background-color: var(--color-white);
+    color: var(--color-text-base);
+    box-shadow: 0px 4px 10px  #0000000a;
+    border: none;
+    border-radius: 4px;
+    height: 50px;
+    padding: 0 16px;
+
+
+    &::placeholder {
+      color: var(--color-text-complement);
+      opacity: 0.7;
+    }
+  }
+}

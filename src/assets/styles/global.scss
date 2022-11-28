@@ -1,0 +1,75 @@
+//colors variable
+
+
+:root {
+  font-size: 87.5%;
+
+  --color-background: #F6F5FC;
+  --color-primary: #55b2a4;
+  --color-secondary: #5cb2ac;
+  --color-text-base: #333333;
+  --color-text-complement: #5c5c5c;
+  --color-white: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--color-background);
+  position: relative;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+body,
+input,
+button,
+textarea {
+  font: 400 1rem 'Sora', sans-serif;
+  color: var(--color-text-base);
+}
+
+button {
+  cursor: pointer;
+}
+
+@media (min-width: 700px) {
+  :root {
+    font-size: 92.5%;
+  }
+}
+
+
+.swiper {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 320px;
+  height: fit-content;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--color-primary);
+}
+

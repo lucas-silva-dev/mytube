@@ -1,0 +1,100 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 720px;
+
+  margin: 32px auto 0;
+  padding: 0 16px 24px;
+
+
+  li {
+    width: 100%;
+    list-style: none;
+    cursor: pointer;
+
+    & + li {
+      margin-top: 24px;
+      padding-top: 24px;
+      border-top: 1px solid #0000000a;
+    }
+
+    figure {
+      display: grid;
+      grid-template-columns: 60% 40%;
+      column-gap: 1.25rem;
+
+      .ancor {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-decoration: none;
+
+        > img {
+          display: flex;
+          width: 100%;
+          border-radius: 4px;
+          flex: 1;
+        }
+      }
+
+
+      figcaption {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        flex: 1;
+
+        strong {
+          color: var(--color-text-base);
+          font-size: 1.25rem;
+        }
+
+        small {
+          margin-top: 8px;
+          font-size: 0.75rem;
+          color: var(--color-text-complement);
+          display: flex;
+          align-items: center;
+
+          img {
+            margin-right: 0.25rem;
+            width: 20px;
+            height: 20px;
+          }
+        }
+
+        p {
+          margin-top: 16px;
+          color: var(--color-text-complement);
+        }
+
+        a:not(.ancor) {
+          margin-top: 16px;
+          color: var(--color-primary);
+          font-weight: 400;
+          font-family: 'Roboto', sans-serif;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      figcaption :where(strong, small) {
+        display: block;
+      }
+
+      figcaption :where(strong, p) {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+
+    }
+  }
+}
